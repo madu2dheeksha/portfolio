@@ -1,0 +1,99 @@
+/* Theme tokens – identical to the original site's theme */
+:root {
+  --landing-accent: #e87a5d;
+  --landing-active: #c94733;
+  --landing-background: #fdfbf7;
+  --landing-error: #f44336;
+  --landing-focus: #e2584d;
+  --landing-font-family-primary: Georgia, serif;
+  --landing-font-family-secondary: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --landing-font-family-special: Garamond, 'EB Garamond', Georgia, serif;
+  --landing-foreground: #ffffff;
+  --landing-gradient-accent: linear-gradient(135deg, #e87a5d 0%, #e2584d 100%);
+  --landing-gradient-overlay: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 100%);
+  --landing-gradient-primary: linear-gradient(135deg, #e2584d 0%, #e87a5d 100%);
+  --landing-gradient-secondary: linear-gradient(135deg, #fdfbf7 0%, #ffffff 100%);
+  --landing-hover: #d64839;
+  --landing-link: #e2584d;
+  --landing-overlay: #000000;
+  --landing-primary: #e2584d;
+  --landing-secondary: #e87a5d;
+  --landing-success: #4caf50;
+  --landing-text: #222222;
+  --landing-text-muted: #666666;
+  --landing-warning: #ffc107;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--landing-background);
+  color: var(--landing-text);
+  font-family: var(--landing-font-family-secondary);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Keep section headings clear of the top of the screen when jumping via anchors */
+section[id],
+footer[id] {
+  scroll-margin-top: 16px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 8px;
+  z-index: 100;
+  background: var(--landing-primary);
+  color: var(--landing-foreground);
+  padding: 8px 16px;
+  font-family: var(--landing-font-family-secondary);
+  text-decoration: none;
+}
+.skip-link:focus {
+  left: 8px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+  }
+  .stagger-item,
+  .fade-in,
+  .animate-on-scroll,
+  .portfolio-cta-reveal,
+  .hero-body-text,
+  .hero-cta-container,
+  .hero-visual-wrapper {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* "Home" links go all the way back to the top, including the navbar */
+#home {
+  scroll-margin-top: 400px;
+}
