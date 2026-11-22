@@ -16,7 +16,7 @@ export const site = {
     'Marketing & Design Professional. Crafting impactful marketing experiences through strategic brand communication and visual storytelling.',
   // Replace with your own photo: save it as public/images/profile.webp and
   // change this value to '/images/profile.webp'.
-  profileImage: '/images/profile-placeholder.svg',
+  profileImage: '/images/profile.webp',
   profileAlt: 'Madu Dheeksha Portrait',
   copyright: '© 2025 Madu Dheeksha. All rights reserved.',
 };
